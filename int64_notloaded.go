@@ -1,6 +1,6 @@
 package ld
 
-// Int64Some returns an Int64 which does not have a value;
+// Int64NotLoaded returns an Int64 which does not have a value;
 // and in particular the "not loaded" type of a lack of a value.
 //
 // For example:
