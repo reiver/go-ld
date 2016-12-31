@@ -12,10 +12,16 @@ func Int64NotLoaded() Int64 {
 
 type Int64NoneNotLoaded struct{}
 
+func (Int64NoneNotLoaded) String() string {
+	return "<Int64NotLoaded>"
+}
+
+// Int64Matcher makes Int64NoneNotLoaded fit the Int64Matcher interface.
 func (Int64NoneNotLoaded) Int64Matcher() {
 	// Nothing here.
 }
 
-func (Int64NoneNotLoaded) String() string {
-	return "<Int64NotLoaded>"
+// NullableInt64Matcher makes Int64NoneNotLoaded fit the NullableInt64Matcher interface.
+func (Int64NoneNotLoaded) NullableInt64Matcher() {
+	// Nothing here.
 }
