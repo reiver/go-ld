@@ -1,5 +1,9 @@
 package ld
 
+import (
+	"fmt"
+)
+
 type NullableInt64 struct {
 	value int64
 	loaded bool
@@ -15,7 +19,7 @@ func (receiver NullableInt64) Match() NullableInt64Matcher {
 		return Int64NoneNull{}
 	}
 
-	return In64Value(receiver.value)
+	return Int64Value(receiver.value)
 }
 
 func (receiver NullableInt64) String() string {

@@ -6,7 +6,7 @@ package ld
 //
 //	var x ld.NullableInt64 = ld.NullableInt64Some(41)
 func NullableInt64Some(v int64) NullableInt64 {
-	return Int64 {
+	return NullableInt64 {
 		value: v,
 		loaded: true,
 		null: false,
