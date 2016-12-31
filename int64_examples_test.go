@@ -6,7 +6,7 @@ import (
 	"github.com/reiver/go-ld"
 )
 
-func ExampleInt64_notequal() {
+func ExampleInt64_notEqual() {
 
 	var a ld.Int64 = ld.Int64Some(17)
 	fmt.Printf("a = %v\n", a)
@@ -48,7 +48,7 @@ func ExampleInt64_equal() {
 	// They are equal.
 }
 
-func ExampleInt64_Match_none_not_loaded() {
+func ExampleInt64_Match_noneNotLoaded() {
 
 	switch x := ld.Int64NotLoaded().Match().(type) {
 	case ld.Int64Value:
@@ -104,7 +104,7 @@ func ExampleInt64_Match_some() {
 	// MATCHED Int64Value: (ld.Int64Value) 42
 }
 
-func ExampleInt64_Match_some_math() {
+func ExampleInt64_Match_someMath() {
 
 	var a ld.Int64 = ld.Int64Some(2)
 
