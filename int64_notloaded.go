@@ -1,5 +1,7 @@
 package ld
 
+// Int64Some returns an Int64 which does not have a value;
+// and in particular the "not loaded" type of a lack of a value.
 func Int64NotLoaded() Int64 {
 	return Int64{}
 }
