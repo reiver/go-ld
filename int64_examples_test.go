@@ -6,7 +6,7 @@ import (
 	"github.com/reiver/go-ld"
 )
 
-func ExampleInt64_not_equal() {
+func ExampleInt64_notequal() {
 
 	var a ld.Int64 = ld.Int64Some(17)
 	fmt.Printf("a = %v\n", a)
