@@ -33,3 +33,15 @@ func (receiver NullableInt64) String() string {
 
 	return fmt.Sprintf("NullableInt64Some(%d)", receiver.value)
 }
+
+func (receiver NullableInt64) Int64() (int64, error) {
+	if !receiver.loaded {
+		return 0, errNotLoaded
+	}
+
+	if receiver.null {
+		return 0, errNull
+	}
+
+	return receiver.value, nil
+}

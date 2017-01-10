@@ -99,3 +99,11 @@ func (receiver Int64) String() string {
 
 	return fmt.Sprintf("Int64Some(%d)", receiver.value)
 }
+
+func (receiver Int64) Int64() (int64, error) {
+	if !receiver.loaded {
+		return 0, errNotLoaded
+	}
+
+	return receiver.value, nil
+}
