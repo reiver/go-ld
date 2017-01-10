@@ -1,6 +1,11 @@
 package ld
 
+import (
+	"errors"
+)
+
 var (
-	errNotLoaded = internalNotLoadedComplainer{}
-	errNull      = internalNullComplainer{}
+	errNilReceiver = errors.New("Nil Receiver")
+	errNotLoaded   = internalNotLoadedComplainer{}
+	errNull        = internalNullComplainer{}
 )

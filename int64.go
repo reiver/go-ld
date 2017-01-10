@@ -1,6 +1,8 @@
 package ld
 
 import (
+	"github.com/reiver/go-cast"
+
 	"fmt"
 )
 
@@ -106,4 +108,20 @@ func (receiver Int64) Int64() (int64, error) {
 	}
 
 	return receiver.value, nil
+}
+
+func (receiver *Int64) Scan(v interface{}) error {
+	if nil == receiver {
+		return errNilReceiver
+	}
+
+	i64, err := cast.Int64(v)
+	if nil != err {
+		return err
+	}
+
+	receiver.value = i64
+	receiver.loaded = true
+
+	return nil
 }
